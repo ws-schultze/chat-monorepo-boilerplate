@@ -1,0 +1,36 @@
+{
+  "name": "next-auth-setup",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.5",
+    "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "@auth/prisma-adapter": "^2.4.2",
+    "@auth/unstorage-adapter": "^2.4.2",
+    "@prisma/client": "^5.19.0",
+    "graphql": "^16.9.0",
+    "next": "14.2.7",
+    "next-auth": "^5.0.0-beta.20",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "postcss": "^8",
+    "prisma": "^5.19.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

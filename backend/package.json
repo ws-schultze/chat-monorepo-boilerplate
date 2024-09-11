@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "GraphQL Express Server",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npm run generate-schema && tsc",
+    "start": "npm run compile && tsx ./dist/src/server.js",
+    "dev": "tsx src/server.ts",
+    "generate-schema": "tsx ./src/graphql/typeDefs/generate-schema.ts",
+    "codegen": "npm run generate-schema && graphql-codegen --config codegen.ts"
+  },
+  "author": "Woodland Schultze",
+  "license": "ISC",
+  "type": "module",
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "@apollo/subgraph": "^2.9.0",
+    "@auth/express": "^0.6.0",
+    "@auth/prisma-adapter": "^2.4.2",
+    "@graphql-tools/load-files": "^7.0.0",
+    "@prisma/client": "^5.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "graphql": "^16.9.0",
+    "graphql-http": "^1.22.1",
+    "graphql-tag": "^2.12.6",
+    "lodash.merge": "^4.6.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/introspection": "4.0.3",
+    "@graphql-codegen/typescript": "4.0.9",
+    "@graphql-codegen/typescript-resolvers": "4.2.1",
+    "@types/cors": "^2.8.17",
+    "@types/lodash.merge": "^4.6.9",
+    "@types/node": "^22.5.3",
+    "prisma": "^5.19.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
